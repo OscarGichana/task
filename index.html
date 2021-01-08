@@ -8,19 +8,17 @@
 
   
 
-  <script src="sen.js"></script>
 
   <script> 
-
     var sentence = prompt("Please enter your sentence", "");
     var sentenceLength = prompt("Please enter your desired length", "");
     if (sentence.length<= sentenceLength) {
       confirm(sentence)
     }else if(sentence.length > sentenceLength){
-      let short_sentence = sentence.substr(0, sentenceLength)
+      let short_sentence = sentence.substr(0, sentence.lastIndexOf(' ', sentenceLength))
       confirm(short_sentence)
     };
-    
+
      
     
     </script>
